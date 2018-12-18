@@ -39,7 +39,7 @@ public class Controller implements Initializable {
         });
     }
 
-    private void openSendDialog(File file) {
+    private void openSendDialog(File file) {//sending dialog
         Parent root;
         try {
             Stage stage = new Stage();
@@ -56,12 +56,12 @@ public class Controller implements Initializable {
         }
     }
 
-    public void toggleSearchBtns(boolean searching) {
+    public void toggleSearchBtns(boolean searching) {//while searching you  can't click "traži" button
         traziBtn.setDisable(searching);
         prekiniBtn.setDisable(!searching);
     }
 
-    public void onTrazi(ActionEvent actionEvent) {
+    public void onTrazi(ActionEvent actionEvent) {//searching
         search = new Search(this);
         fileList.clear();
 
@@ -73,7 +73,7 @@ public class Controller implements Initializable {
         return fileList;
     }
 
-    public void onPrekini(ActionEvent actionEvent) {
+    public void onPrekini(ActionEvent actionEvent) {//when user click on "prekini"
         System.out.println("Zaustavljanje!");
         search.stop();
         toggleSearchBtns(false);
