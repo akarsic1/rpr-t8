@@ -1,0 +1,7 @@
+.isValid {
+    -fx-background-color: yellowgreen;
+}
+
+.isNotValid {
+    -fx-background-color: lightpink;
+}
